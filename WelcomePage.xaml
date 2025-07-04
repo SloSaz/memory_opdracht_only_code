@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUI.Pages.WelcomePage"
+             Title="Welcome">
+    <ContentPage.Content>
+            <Grid BackgroundColor="{AppThemeBinding Light=#F0F0F0, Dark=#202020}">
+        <StackLayout VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="400">
+            <Label Text="Memory Game" 
+                   FontSize="36" 
+                   FontAttributes="Bold" 
+                   HorizontalOptions="Center" 
+                   Margin="0,0,0,30" 
+                   TextColor="{AppThemeBinding Light=#333333, Dark=#FFFFFF}"/>
+            
+            <Label Text="Player Name:" 
+                   FontSize="16" 
+                   Margin="0,0,0,5" 
+                   TextColor="{AppThemeBinding Light=#555555, Dark=#CCCCCC}"/>
+            <Entry x:Name="PlayerNameEntry" 
+                   HeightRequest="40" 
+                   FontSize="16" 
+                   Margin="0,0,0,20"/>
+            
+            <Label Text="Number of Pairs:" 
+                   FontSize="16" 
+                   Margin="0,0,0,5" 
+                   TextColor="{AppThemeBinding Light=#555555, Dark=#CCCCCC}"/>
+            <Slider x:Name="PairsSlider" 
+                    Minimum="5" 
+                    Maximum="15" 
+                    Value="5" 
+                    Margin="0,0,0,5"/>
+            <Label Text="{Binding Source={x:Reference PairsSlider}, Path=Value, StringFormat='{0:0}'}" 
+                   FontSize="16" 
+                   HorizontalOptions="Center" 
+                   Margin="0,0,0,20" 
+                   TextColor="{AppThemeBinding Light=#555555, Dark=#CCCCCC}"/>
+            
+            <Button Text="Start Game" 
+                    HeightRequest="50" 
+                    BackgroundColor="#4CAF50" 
+                    TextColor="White" 
+                    FontSize="18" 
+                    Clicked="StartGameButton_Clicked" 
+                    Margin="0,0,0,20"/>
+            
+            <Button Text="High Scores" 
+                    HeightRequest="50" 
+                    BackgroundColor="#2196F3" 
+                    TextColor="White" 
+                    FontSize="18" 
+                    Clicked="HighScoresButton_Clicked" 
+                    Margin="0,0,0,20"/>
+            
+            <Button Text="Exit" 
+                    HeightRequest="50" 
+                    BackgroundColor="#F44336" 
+                    TextColor="White" 
+                    FontSize="18" 
+                    Clicked="ExitButton_Clicked"/>
+        </StackLayout>
+    </Grid>
+    </ContentPage.Content>
+</ContentPage>

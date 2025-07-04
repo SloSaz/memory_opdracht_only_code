@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUI.Pages.CustomCardImagesPage">
+    <ContentPage.Content>
+        
+        <!-- CustomCardImagesPage.xaml would include: -->
+        <!-- -->
+        <!-- - Grid layout for displaying images -->
+        <!-- - Form for adding new images -->
+        <!-- - Delete buttons for each image -->
+        <!-- - Loading indicator -->
+        <!-- -->
+    </ContentPage.Content>
+</ContentPage>
